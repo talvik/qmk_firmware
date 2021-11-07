@@ -5,6 +5,13 @@
 * `make momoka_ergo:talvik_ergo:dfu-split-right`
 * `make momoka_ergo:talvik_ergo:dfu-split-left`
 
+```
+qmk json2c -o keyboards/momoka_ergo/keymaps/talvik_ergo/keymap.c talvik_ergo.json && \
+make momoka_ergo:talvik_ergo && \ 
+echo "### Plug-in right side ###" && make momoka_ergo:talvik_ergo:dfu-split-right && \
+echo "### Plug-in left side ###" && make momoka_ergo:talvik_ergo:dfu-split-left 
+```
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
